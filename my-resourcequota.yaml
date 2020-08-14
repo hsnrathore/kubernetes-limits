@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  namespace: hxnr
+  name: hxnrquota
+spec:
+  hard:
+     limits.cpu: 1000m
+     limits.memory: 700Mi
+     requests.cpu: 900m
+     requests.memory: 550Mi
+     pods: 3
+status: {}

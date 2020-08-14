@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  namespace: hxnr
+  name: hxnrquotalr
+spec:
+  limits:
+    - default:
+         cpu: 200m
+         memory: 100Mi
+      defaultRequest:
+         cpu: 100m
+         memory: 80Mi
+      min:
+         cpu: 50m
+         memory: 50Mi
+      max:
+         cpu: 400m
+         memory: 400Mi
+      type: Container
